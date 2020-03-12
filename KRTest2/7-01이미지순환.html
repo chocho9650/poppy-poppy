@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Hello Javascript</title>
+    <!-- javascript start -->
+    <script type="text/javascript">
+    function image_step() {
+        var num = 0;
+        setInterval(function() {
+            var img = ['img/1.gif', 'img/2.gif', 'img/3.gif'];
+            num = ++num % 3;
+            document.getElementById("lyan").src = img[num];
+
+        }, 3000);
+    }
+    </script>
+    <!-- javascript end -->
+</head>
+
+<body onload="image_step()">
+    <img src="img/1.gif" id="lyan" width="480" height="480" />
+</body>
+
+</html>
